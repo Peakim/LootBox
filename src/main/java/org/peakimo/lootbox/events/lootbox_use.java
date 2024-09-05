@@ -1,8 +1,7 @@
 package org.peakimo.lootbox.events;
 
-import org.bukkit.Bukkit;
-import org.bukkit.Location;
-import org.bukkit.Material;
+import org.bukkit.*;
+import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.event.EventHandler;
 import org.bukkit.event.Listener;
@@ -21,6 +20,9 @@ public class lootbox_use implements Listener {
             bazikon.getWorld().getBlockAt(BlockLocation).setType(Material.AIR);
 
             Bukkit.dispatchCommand(Bukkit.getConsoleSender(), "lp user " + playername + " parent addtemp vip+ 5d");
+
+            Bukkit.getServer().getWorld("world").spawnEntity(bazikon.getLocation(), EntityType.FIREWORK);
+
 
 
         }
