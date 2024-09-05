@@ -1,0 +1,4 @@
+name: lootbox
+version: '${project.version}'
+main: org.peakimo.lootbox.Lootbox
+api-version: '1.16'
